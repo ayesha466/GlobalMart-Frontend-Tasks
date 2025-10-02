@@ -4,6 +4,7 @@ import Categories from '@/components/Categories';
 import ProductGrid from '@/components/ProductGrid';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import AboutUs from '@/components/AboutUs';
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
         <Hero />
         <Categories />
         <ProductGrid />
+        <AboutUs />
         <Testimonials />
       </main>
       <Footer />

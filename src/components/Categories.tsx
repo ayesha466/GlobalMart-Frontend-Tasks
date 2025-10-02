@@ -1,30 +1,77 @@
-import { Smartphone, ShoppingBag, Home, Watch } from 'lucide-react';
+import { 
+  Baby, 
+  Sparkles, 
+  BookOpen, 
+  Monitor, 
+  Shirt, 
+  ShoppingCart, 
+  Heart, 
+  Home, 
+  Plane, 
+  Dumbbell
+} from 'lucide-react';
 import CategoryCard from './CategoryCard';
 
 const categories = [
   {
-    title: 'Electronics',
-    icon: Smartphone,
-    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500&h=500&fit=crop',
-    itemCount: 1200
+    title: 'Baby',
+    icon: Baby,
+    image: '/categories/Baby.png',
+    itemCount: 450
   },
   {
-    title: 'Fashion',
-    icon: ShoppingBag,
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&h=500&fit=crop',
-    itemCount: 2500
-  },
-  {
-    title: 'Home & Living',
-    icon: Home,
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&h=500&fit=crop',
+    title: 'Beauty',
+    icon: Sparkles,
+    image: '/categories/Beauty.png',
     itemCount: 800
   },
   {
-    title: 'Accessories',
-    icon: Watch,
-    image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500&h=500&fit=crop',
+    title: 'Books',
+    icon: BookOpen,
+    image: '/categories/Books.png',
+    itemCount: 1200
+  },
+  {
+    title: 'Electronics',
+    icon: Monitor,
+    image: '/categories/Electronics.png',
+    itemCount: 2100
+  },
+  {
+    title: 'Fashion',
+    icon: Shirt,
+    image: '/categories/Fashion.png',
+    itemCount: 3200
+  },
+  {
+    title: 'Grocery',
+    icon: ShoppingCart,
+    image: '/categories/Grocery.png',
+    itemCount: 1500
+  },
+  {
+    title: 'Health',
+    icon: Heart,
+    image: '/categories/Health.png',
     itemCount: 950
+  },
+  {
+    title: 'Home',
+    icon: Home,
+    image: '/categories/Home.png',
+    itemCount: 1800
+  },
+  {
+    title: 'Travel',
+    icon: Plane,
+    image: '/categories/Travel.png',
+    itemCount: 320
+  },
+  {
+    title: 'Sports',
+    icon: Dumbbell,
+    image: '/categories/sports.png',
+    itemCount: 750
   }
 ];
 
@@ -42,7 +89,7 @@ const Categories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {categories.map((category, index) => (
             <div 
               key={category.title}

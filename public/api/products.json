@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Stylish Bags",
+    "price": 89.99,
+    "image": "/products/Bags.webp",
+    "description": "High-quality stylish bags for everyday use"
+  },
+  {
+    "id": "2",
+    "name": "Advanced Machine",
+    "price": 299.99,
+    "image": "/products/Machine.jpg",
+    "description": "Advanced machine with cutting-edge technology"
+  },
+  {
+    "id": "3",
+    "name": "Sports Rackets",
+    "price": 129.99,
+    "image": "/products/Rackets.webp",
+    "description": "Professional sports rackets for all skill levels"
+  },
+  {
+    "id": "4",
+    "name": "Wooden Shelf",
+    "price": 199.99,
+    "image": "/products/Shelf.webp",
+    "description": "Elegant wooden shelf for home decoration"
+  },
+  {
+    "id": "5",
+    "name": "Running Shoes",
+    "price": 149.99,
+    "image": "/products/Shoes.jpg",
+    "description": "Comfortable running shoes for athletes"
+  },
+  {
+    "id": "6",
+    "name": "Educational Toys",
+    "price": 39.99,
+    "image": "/products/Toys.webp",
+    "description": "Fun and educational toys for children"
+  },
+  {
+    "id": "7",
+    "name": "iPhone 15",
+    "price": 999.99,
+    "image": "/products/iphone15.avif",
+    "description": "Latest iPhone 15 with advanced features"
+  },
+  {
+    "id": "8",
+    "name": "Organic Oil",
+    "price": 24.99,
+    "image": "/products/oil.png",
+    "description": "Pure organic oil for cooking and skincare"
+  },
+  {
+    "id": "9",
+    "name": "Skincare Set",
+    "price": 79.99,
+    "image": "/products/skincare.jpg",
+    "description": "Complete skincare set for healthy skin"
+  },
+  {
+    "id": "10",
+    "name": "Modern Table",
+    "price": 499.99,
+    "image": "/products/table.jpg",
+    "description": "Modern table design for contemporary homes"
+  }
+]

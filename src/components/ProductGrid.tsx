@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 import { Loader2 } from 'lucide-react';
 
+// Define the product interface
 interface Product {
   id: string;
   name: string;
-  price: string;
+  price: number;
   image: string;
+  description?: string;
 }
 
 const ProductGrid = () => {
@@ -15,10 +17,12 @@ const ProductGrid = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Fetch products from the local API
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://68bbeb6a0f2491613edd9cf1.mockapi.io/products');
+        // Using local API endpoint
+        const response = await fetch('/api/products.json');
         
         if (!response.ok) {
           throw new Error('Failed to fetch products');
@@ -40,23 +44,52 @@ const ProductGrid = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
-        <Loader2 className="h-12 w-12 text-primary animate-spin" />
-      </div>
+      <section id="products" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold font-poppins mb-4">
+              Featured <span className="text-primary">Products</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Browse our curated collection of premium products. 
+              Each item is carefully selected to bring you the best quality and value.
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="h-12 w-12 text-primary animate-spin" />
+            <span className="ml-3 text-lg">Loading products...</span>
+          </div>
+        </div>
+      </section>
     );
   }
 
   if (error) {
     return (
-      <div className="text-center py-20">
-        <p className="text-destructive text-lg">Error loading products: {error}</p>
-        <button 
-          onClick={() => window.location.reload()} 
-          className="mt-4 text-primary hover:underline"
-        >
-          Try Again
-        </button>
-      </div>
+      <section id="products" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold font-poppins mb-4">
+              Featured <span className="text-primary">Products</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Browse our curated collection of premium products. 
+              Each item is carefully selected to bring you the best quality and value.
+            </p>
+          </div>
+
+          <div className="text-center py-20">
+            <p className="text-destructive text-lg">Failed to fetch products: {error}</p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="mt-4 text-primary hover:underline"
+            >
+              Try Again
+            </button>
+          </div>
+        </div>
+      </section>
     );
   }
 
@@ -79,7 +112,7 @@ const ProductGrid = () => {
               key={product.id}
               id={product.id}
               title={product.name}
-              price={parseFloat(product.price)}
+              price={product.price}
               image={product.image}
             />
           ))}
